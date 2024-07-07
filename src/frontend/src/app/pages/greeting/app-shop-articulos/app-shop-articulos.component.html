@@ -1,8 +1,13 @@
 <div class="col-12">
-    <mat-card class="cardWithShadow">
-        <a href="/shop/carrito">Carrito</a>
-    </mat-card>
+    <div style="height: 100%;">
+      <mat-toolbar class="cardWithShadow">
+        <button mat-button><a href="/dashboard">Dashboard</a></button>
+        <button mat-button><a href="/shop/articulos">Catálogo de Articulos</a></button>
+        <button mat-button><a href="/shop/carrito">Carrito</a></button>
+      </mat-toolbar>
+  </div>
 </div>
+
 <div class="col-12">
     <mat-card class="cardWithShadow">
       Compra de artículos
@@ -23,19 +28,22 @@
         
         <ng-container matColumnDef="precio">
           <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.precio}} </mat-cell>
+          <mat-cell *matCellDef="let element"> ${{element.precio}} </mat-cell>
         </ng-container>
         
         <ng-container matColumnDef="cantidad">
           <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
           <mat-cell *matCellDef="let element"> {{element.cantidad}} </mat-cell>
         </ng-container>
-        <!--
-            <ng-container matColumnDef="avatar">
-              <mat-header-cell *matHeaderCellDef> Avatar </mat-header-cell>
-              <mat-cell *matCellDef="let element"> <a mat-raised-button >Link</a></mat-cell>
-            </ng-container>
-        -->
+        <ng-container matColumnDef="add_carrito">
+          <mat-header-cell *matHeaderCellDef> Opciones </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+              
+              <button color="primary" 
+                  mat-raised-button (click)="addCarrito(element)">Agregar al Carrito</button>
+
+          </mat-cell>
+        </ng-container>
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

@@ -8,6 +8,8 @@ import { MaterialModule } from '../../material.module';
 import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { GreetingRoutes } from './greeting.routing';
 import { AppGreetingComponent } from './app-greeting/app-greeting.component';
 import { AppPersonasComponent } from './app-personas/app-personas.component';
@@ -25,6 +27,7 @@ import { AppShopArticulosComponent } from './app-shop-articulos/app-shop-articul
     ReactiveFormsModule,
     TablerIconsModule.pick(TablerIcons),
     SweetAlert2Module,
+    MatToolbarModule
   ],
   declarations: [
     AppGreetingComponent,

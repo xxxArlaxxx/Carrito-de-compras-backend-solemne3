@@ -1,7 +1,9 @@
 <div class="col-12">
-    <mat-card class="cardWithShadow">
-        <a href="/shop/carrito">Carrito</a>
-    </mat-card>
+  <div style="height: 100%;">
+    <mat-toolbar class="cardWithShadow">
+      <button mat-button><a href="/dashboard">Dashboard</a></button>
+    </mat-toolbar>
+</div>
 </div>
 <div class="col-12">
     <mat-card class="cardWithShadow">
@@ -23,7 +25,7 @@
         
         <ng-container matColumnDef="precio">
           <mat-header-cell *matHeaderCellDef> Precio </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.precio}} </mat-cell>
+          <mat-cell *matCellDef="let element"> ${{element.precio}} </mat-cell>
         </ng-container>
         
         <ng-container matColumnDef="cantidad">

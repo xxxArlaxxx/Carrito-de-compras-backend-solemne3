@@ -14,5 +14,14 @@ export const navItems: NavItem[] = [
     iconName: 'message',
     route: '/greeting',
   },
-
+  {
+    displayName: 'Admin Articulos',
+    iconName: 'message',
+    route: '/articulos',
+  },
+  {
+    displayName: 'Tienda Articulos',
+    iconName: 'message',
+    route: '/shop/articulos',
+  },
 ];
